@@ -40,31 +40,31 @@ extension LeaderboardViewController: ConnectivityDelegate {
     }
 
     func recieveMessage(type: MessageType, data: Data?) {
-        OperationQueue.main.addOperation {
-            switch type {
-            case .showLeaderboard:
-                do {
-                    if let jsonString = String(data: data!, encoding: .utf8) {
-                        print(jsonString)
-                    }
-                    let jsonDecoder = JSONDecoder()
-                    let persons = try jsonDecoder.decode(PersonMessages.self, from: data!)
-
-                    persons.persons.forEach({ player in
-                        if player.username == self.connection.peerID.displayName {
-                            self.me = player
-                        }
-                    })
-
-                } catch {
-                    let alert = UIAlertController(title: "Failed to get question", message: "\(error)", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
-                }
-            default:
-                break
-            }
-        }
+//        OperationQueue.main.addOperation {
+//            switch type {
+//            case .showLeaderboard:
+//                do {
+//                    if let jsonString = String(data: data!, encoding: .utf8) {
+//                        print(jsonString)
+//                    }
+//                    let jsonDecoder = JSONDecoder()
+//                    let persons = try jsonDecoder.decode(PersonMessages.self, from: data!)
+//
+//                    persons.persons.forEach({ player in
+//                        if player.username == self.connection.peerID.displayName {
+//                            self.me = player
+//                        }
+//                    })
+//
+//                } catch {
+//                    let alert = UIAlertController(title: "Failed to get question", message: "\(error)", preferredStyle: .alert)
+//                    alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+//                    self.present(alert, animated: true, completion: nil)
+//                }
+//            default:
+//                break
+//            }
+//        }
     }
 
     func error(message: String) {
