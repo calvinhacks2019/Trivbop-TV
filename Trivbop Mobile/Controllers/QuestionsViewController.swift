@@ -60,6 +60,20 @@ class QuestionsViewController: UIViewController {
         questionLabel.font = UIFont(name: "Bebas Neue", size: 40.0)
     }
 
+    var me: PersonMessage?
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+
+        guard let destinationVC = segue.destination as? LeaderboardViewController,
+            let me = self.me else { return }
+        destinationVC.me = me
+    }
+
+    func showLeaderboard(me: PersonMessage) {
+        self.me = me
+    }
+
     func encode(answer: String) -> Data? {
         var timeElapsed: Double!
         if let starting = startPoint {
@@ -154,6 +168,15 @@ extension QuestionsViewController: ConnectivityDelegate {
                     self.expireQuestion(timeUp: true)
                 case .revealResult:
                     self.revealAnswer()
+                case .showLeaderboard:
+                    let persons = try jsonDecoder.decode(PersonMessages.self, from: data!)
+
+                    persons.persons.forEach({ player in
+                        if player.username == self.connection.peerID.displayName {
+                            self.showLeaderboard(me: player)
+                        }
+                    })
+                    self.performSegue(withIdentifier: "Leaderboard", sender: nil)
                 default:
                     break
                 }
