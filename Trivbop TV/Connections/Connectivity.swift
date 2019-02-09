@@ -19,6 +19,8 @@ class Connectivity: NSObject, MCSessionDelegate {
     var browser: MCNearbyServiceBrowser!
     var advertiser: MCNearbyServiceAdvertiser? = nil
 
+    var players: [Player] = []
+
     var delegate: ConnectivityDelegate?
 
     func setupPeerWithDisplayName (displayName:String){
@@ -48,23 +50,46 @@ class Connectivity: NSObject, MCSessionDelegate {
             advertiser = MCNearbyServiceAdvertiser(peer: peerID, discoveryInfo: nil, serviceType: serviceType)
             advertiser?.delegate = self
             advertiser?.startAdvertisingPeer()
-        }else{
+        } else {
             advertiser?.stopAdvertisingPeer()
             advertiser = nil
         }
     }
 
-    func sendData (variable: String, data: AnyObject, sendTo: AnyObject){
-
+    // to player nil sends to all
+    func sendData(data: Data, to players: [Player]?) {
+        var peers: [MCPeerID] = []
+        if players == nil {
+            peers = self.players.peerID()
+        } else {
+            peers = players!.peerID()
+        }
+        do {
+            try self.session.send(data, toPeers: peers, with: .reliable)
+        } catch {
+            self.delegate?.error(message: "Error: \(error)")
+        }
     }
 
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         print("\(peerID) changed state to \(state.rawValue)")
+        players.removeAll()
+        session.connectedPeers.forEach { peer in
+            let player = Player(peerID: peer)
+            players.append(player)
+        }
         self.delegate?.connectedDevicesChanged(manager: self, connectedDevices: session.connectedPeers.map { $0.displayName })
     }
 
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         print("Recieved data \(data)")
+        do {
+            let jsonDecoder = JSONDecoder()
+            let sendable = try jsonDecoder.decode(MessageSendable.self, from: data)
+            self.delegate?.recieveMessage(type: sendable.type, data: sendable.data, from: peerID)
+        } catch {
+            self.delegate?.error(message: "Error: \(error)")
+        }
     }
 
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {

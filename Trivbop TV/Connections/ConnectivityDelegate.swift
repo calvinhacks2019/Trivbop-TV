@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import MultipeerConnectivity
 
 protocol ConnectivityDelegate {
     func connectedDevicesChanged(manager: Connectivity, connectedDevices: [String])
-    
+    func recieveMessage(type: MessageType, data: Data?, from peer: MCPeerID)
+    func error(message: String)
 }
