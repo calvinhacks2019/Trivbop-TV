@@ -17,4 +17,13 @@ extension Array where Element: Player {
         }
         return peers
     }
+
+    func peerExists(peer: MCPeerID) -> Bool {
+        for player in self {
+            if player.peerID == peer {
+                return true
+            }
+        }
+        return false
+    }
 }

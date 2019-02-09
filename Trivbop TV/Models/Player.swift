@@ -18,6 +18,7 @@ class Player {
         return peerID.displayName
     }
     var color: UIColor
+    var lastPosition: Int?
 
     init(peerID: MCPeerID) {
         self.peerID = peerID
@@ -32,7 +33,12 @@ class Player {
 
     func addPoint(timeElapsed: Double) {
         print("Time: \(timeElapsed)")
-        points += 10
-        print("\(username) has \(points) now!")
+        print(timeElapsed)
+        if timeElapsed <= 4.4 {
+            points += 1000
+        } else {
+            points += Int(1000 - 700 * (1.0 / 5.6 * (timeElapsed - 4.4)))
+        }
+        print("Gave \(username) \(points)")
     }
 }

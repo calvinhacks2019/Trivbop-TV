@@ -65,6 +65,14 @@ class StartPartyViewController: UIViewController {
         }
         return nil
     }
+
+    func sendLeadershipInfo() {
+        guard let data = encode() else  {
+            print("Failed to encode")
+            return
+        }
+        connection.sendData(data: data, to: nil)
+    }
 }
 
 extension StartPartyViewController: ConnectivityDelegate {

@@ -7,9 +7,28 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SplashViewController: UIViewController {
+    var background: AVAudioPlayer?
+
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
+
+        playSound()
+    }
+
+    func playSound() {
+        guard let path = Bundle.main.path(forResource: "background.mp3", ofType: nil)
+             else { return }
+        let url = URL(fileURLWithPath: path)
+
+        do {
+            background = try AVAudioPlayer(contentsOf: url)
+            background?.numberOfLoops = -1
+            background?.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
 }

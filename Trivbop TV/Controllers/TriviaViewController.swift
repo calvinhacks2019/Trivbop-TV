@@ -17,7 +17,9 @@ class TriviaViewController: UIViewController {
 
     var connection: Connectivity!
 
-    var numberOfTriviaPerRound = 15
+    var currentQuestion: Question?
+
+    var numberOfTriviaPerRound = 3
     var currentTrivia = 0 {
         didSet {
             headerLabel.text = "QUESTION \(currentTrivia)/\(numberOfTriviaPerRound)"
@@ -25,7 +27,7 @@ class TriviaViewController: UIViewController {
     }
 
     @IBOutlet weak var progressView: UIProgressView!
-    let maxTime: Double = 15        // Seconds
+    //let maxTime: Double = 15        // Seconds
     var progressValue: Double = 0
 
 
@@ -57,6 +59,7 @@ class TriviaViewController: UIViewController {
 
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.isPrefetchingEnabled = false
 
         questionLabel.isHidden = true
         activityIndicator.startAnimating()
@@ -80,6 +83,8 @@ class TriviaViewController: UIViewController {
         }
     }
 
+    let group = DispatchGroup()
+
     func timeUp() {
         sendExpireQuestion()
 
@@ -89,20 +94,20 @@ class TriviaViewController: UIViewController {
 
         UIView.animate(withDuration: 3.0) {
             var cells = [UICollectionViewCell]()
-            var answerCell: UICollectionViewCell!
-            // assuming tableView is your self.tableView defined somewhere
-            guard let question = self.triviaModel.getCurrent() else { return }
-            for j in 0...question.incorrectAnswers.count
-            {
+            var answerCell: UICollectionViewCell?
+
+            guard let question = self.currentQuestion else {  return }
+            for j in 0...question.incorrectAnswers.count {
                 if let cell = self.collectionView.cellForItem(at: NSIndexPath(row: j, section: 0) as IndexPath) as? AnswerCollectionViewCell {
-                    cell.backgroundColor = cell.backgroundColor?.darker(by: 50)
+                    cell.alpha = 0.25
                     cells.append(cell)
-                    if cell.label.text == question.correctAnswer {
+                    if cell.label.text == question.correctAnswer.htmlDecoded {
                         answerCell = cell
                     }
                 }
             }
-            self.revealAnswer(delay: 3, correctCell: answerCell)
+            guard let cell = answerCell else { return }
+            self.revealAnswer(delay: 3, correctCell: cell)
         }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
@@ -119,7 +124,7 @@ class TriviaViewController: UIViewController {
             OperationQueue.main.addOperation {
                 self.sendRevealAnswer()
                 UIView.animate(withDuration: 3.0) {
-                    correctCell.backgroundColor = correctCell.backgroundColor?.lighter(by: 50)
+                    correctCell.alpha = 1
                 }
             }
         })
@@ -136,6 +141,9 @@ class TriviaViewController: UIViewController {
             return
         }
         currentTrivia += 1
+        if currentTrivia > numberOfTriviaPerRound {
+            performSegue(withIdentifier: "ShowLeaderboard", sender: nil)
+        }
         progressValue = 0
         perform(#selector(updateProgress), with: nil, afterDelay: 0.1)
         activityIndicator.stopAnimating()
@@ -143,7 +151,7 @@ class TriviaViewController: UIViewController {
         questionLabel.text = question.question.htmlDecoded
         collectionView.collectionViewLayout.invalidateLayout()
         collectionView.reloadData()
-
+        currentQuestion = triviaModel.getCurrent()
         sendCurrentQuestion(question: question)
     }
 
@@ -291,6 +299,7 @@ extension TriviaViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AnswerCell", for: indexPath) as! AnswerCollectionViewCell
         cell.label.font = UIFont(name: "Bebas Neue", size: 88.0)
+        cell.alpha = 1
         cell.label.adjustsFontSizeToFitWidth = true
         cell.label.text = triviaModel.getCurrent()?.shuffledAnswers[indexPath.row].htmlDecoded
         cell.backgroundColor = colors[indexPath.row]

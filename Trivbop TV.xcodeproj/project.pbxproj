@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9329F346220F5BF8003A0AF8 /* LeaderboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9329F345220F5BF8003A0AF8 /* LeaderboardCollectionViewCell.swift */; };
+		9347F364220F3CCF0002C16A /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 93F26379220F38E20032C5AA /* background.mp3 */; };
+		9347F366220F43130002C16A /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9347F365220F43130002C16A /* LeaderboardViewController.swift */; };
 		9363D73A220E4E8000129387 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D739220E4E8000129387 /* AppDelegate.swift */; };
 		9363D73C220E4E8000129387 /* TriviaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D73B220E4E8000129387 /* TriviaViewController.swift */; };
 		9363D73F220E4E8000129387 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9363D73D220E4E8000129387 /* Main.storyboard */; };
@@ -34,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9329F345220F5BF8003A0AF8 /* LeaderboardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardCollectionViewCell.swift; sourceTree = "<group>"; };
+		9347F365220F43130002C16A /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		9363D736220E4E8000129387 /* Trivbop TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trivbop TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9363D739220E4E8000129387 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9363D73B220E4E8000129387 /* TriviaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +65,7 @@
 		93F2636E220EF4F90032C5AA /* BebasNeue-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Thin.ttf"; sourceTree = "<group>"; };
 		93F2636F220EF4FA0032C5AA /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
 		93F26375220F06060032C5AA /* UIColor+Adjust.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Adjust.swift"; sourceTree = "<group>"; };
+		93F26379220F38E20032C5AA /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,7 @@
 				9363D73D220E4E8000129387 /* Main.storyboard */,
 				9363D78E220E638900129387 /* AnswerCollectionViewCell.swift */,
 				93F26364220EDCE80032C5AA /* PlayerCollectionViewCell.swift */,
+				9329F345220F5BF8003A0AF8 /* LeaderboardCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -129,6 +136,7 @@
 			children = (
 				93F2636A220EF4E70032C5AA /* Fonts */,
 				9363D740220E4E8200129387 /* Assets.xcassets */,
+				93F26379220F38E20032C5AA /* background.mp3 */,
 				9363D739220E4E8000129387 /* AppDelegate.swift */,
 			);
 			path = "Supporting Files";
@@ -141,6 +149,7 @@
 				9363D790220E6CB800129387 /* SplashViewController.swift */,
 				9363D789220E55AF00129387 /* TriviaViewable.swift */,
 				9363D792220E723300129387 /* StartPartyViewController.swift */,
+				9347F365220F43130002C16A /* LeaderboardViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -203,6 +212,9 @@
 		9363D72E220E4E8000129387 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					background,
+				);
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = CalvinHacks2019;
@@ -235,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9347F364220F3CCF0002C16A /* background.mp3 in Resources */,
 				93F26371220EF4FA0032C5AA /* BebasNeue-Book.ttf in Resources */,
 				9363D741220E4E8200129387 /* Assets.xcassets in Resources */,
 				93F26374220EF4FA0032C5AA /* BebasNeue-Regular.ttf in Resources */,
@@ -256,6 +269,7 @@
 				9363D788220E555F00129387 /* TrivialPresenter.swift in Sources */,
 				93F26376220F06060032C5AA /* UIColor+Adjust.swift in Sources */,
 				9363D795220E73D800129387 /* Connectivity.swift in Sources */,
+				9347F366220F43130002C16A /* LeaderboardViewController.swift in Sources */,
 				9363D799220E802600129387 /* ConnectivityDelegate.swift in Sources */,
 				9363D793220E723300129387 /* StartPartyViewController.swift in Sources */,
 				9363D7AF220EABB900129387 /* Player.swift in Sources */,
@@ -264,6 +278,7 @@
 				9363D73C220E4E8000129387 /* TriviaViewController.swift in Sources */,
 				9363D782220E546A00129387 /* TriviaModel.swift in Sources */,
 				9363D73A220E4E8000129387 /* AppDelegate.swift in Sources */,
+				9329F346220F5BF8003A0AF8 /* LeaderboardCollectionViewCell.swift in Sources */,
 				9363D78C220E55DD00129387 /* String+HTMLDecode.swift in Sources */,
 				9363D791220E6CB800129387 /* SplashViewController.swift in Sources */,
 				93F26365220EDCE80032C5AA /* PlayerCollectionViewCell.swift in Sources */,
