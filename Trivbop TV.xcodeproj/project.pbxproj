@@ -21,6 +21,9 @@
 		9363D795220E73D800129387 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D794220E73D800129387 /* Connectivity.swift */; };
 		9363D797220E78AC00129387 /* UIViewController+AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D796220E78AC00129387 /* UIViewController+AppDelegate.swift */; };
 		9363D799220E802600129387 /* ConnectivityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D798220E802600129387 /* ConnectivityDelegate.swift */; };
+		9363D7AF220EABB900129387 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D7AE220EABB900129387 /* Player.swift */; };
+		9363D7B1220EAEEB00129387 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D7B0220EAEEB00129387 /* Message.swift */; };
+		9363D7B3220EB52900129387 /* PlayerArray+PeerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D7B2220EB52900129387 /* PlayerArray+PeerID.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		9363D794220E73D800129387 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		9363D796220E78AC00129387 /* UIViewController+AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AppDelegate.swift"; sourceTree = "<group>"; };
 		9363D798220E802600129387 /* ConnectivityDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityDelegate.swift; sourceTree = "<group>"; };
+		9363D7AE220EABB900129387 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		9363D7B0220EAEEB00129387 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		9363D7B2220EB52900129387 /* PlayerArray+PeerID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PlayerArray+PeerID.swift"; path = "Trivbop TV/Externsions/PlayerArray+PeerID.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +83,8 @@
 				9363D784220E54E900129387 /* Views */,
 				9363D786220E551400129387 /* Controllers */,
 				9363D78D220E55E700129387 /* Externsions */,
+				9363D7A9220EA14100129387 /* Connections */,
 				9363D742220E4E8200129387 /* Info.plist */,
-				9363D794220E73D800129387 /* Connectivity.swift */,
-				9363D798220E802600129387 /* ConnectivityDelegate.swift */,
 			);
 			path = "Trivbop TV";
 			sourceTree = "<group>";
@@ -89,6 +94,8 @@
 			children = (
 				9363D781220E546A00129387 /* TriviaModel.swift */,
 				9363D787220E555F00129387 /* TrivialPresenter.swift */,
+				9363D7AE220EABB900129387 /* Player.swift */,
+				9363D7B0220EAEEB00129387 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -126,9 +133,19 @@
 			isa = PBXGroup;
 			children = (
 				9363D78B220E55DD00129387 /* String+HTMLDecode.swift */,
+				9363D7B2220EB52900129387 /* PlayerArray+PeerID.swift */,
 				9363D796220E78AC00129387 /* UIViewController+AppDelegate.swift */,
 			);
 			path = Externsions;
+			sourceTree = "<group>";
+		};
+		9363D7A9220EA14100129387 /* Connections */ = {
+			isa = PBXGroup;
+			children = (
+				9363D794220E73D800129387 /* Connectivity.swift */,
+				9363D798220E802600129387 /* ConnectivityDelegate.swift */,
+			);
+			path = Connections;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +223,7 @@
 				9363D795220E73D800129387 /* Connectivity.swift in Sources */,
 				9363D799220E802600129387 /* ConnectivityDelegate.swift in Sources */,
 				9363D793220E723300129387 /* StartPartyViewController.swift in Sources */,
+				9363D7AF220EABB900129387 /* Player.swift in Sources */,
 				9363D78F220E638900129387 /* AnswerCollectionViewCell.swift in Sources */,
 				9363D797220E78AC00129387 /* UIViewController+AppDelegate.swift in Sources */,
 				9363D73C220E4E8000129387 /* TriviaViewController.swift in Sources */,
@@ -213,6 +231,8 @@
 				9363D73A220E4E8000129387 /* AppDelegate.swift in Sources */,
 				9363D78C220E55DD00129387 /* String+HTMLDecode.swift in Sources */,
 				9363D791220E6CB800129387 /* SplashViewController.swift in Sources */,
+				9363D7B1220EAEEB00129387 /* Message.swift in Sources */,
+				9363D7B3220EB52900129387 /* PlayerArray+PeerID.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

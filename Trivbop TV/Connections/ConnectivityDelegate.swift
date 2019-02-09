@@ -10,5 +10,6 @@ import Foundation
 
 protocol ConnectivityDelegate {
     func connectedDevicesChanged(manager: Connectivity, connectedDevices: [String])
-    
+    func recieveMessage(type: MessageType, data: Any)
+    func error(_: String)
 }
