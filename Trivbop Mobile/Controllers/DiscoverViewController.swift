@@ -37,7 +37,7 @@ extension DiscoverViewController: ConnectivityDelegate {
         print(message)
     }
 
-    func recieveMessage(type: MessageType, data: Any) {
+    func recieveMessage(type: MessageType, data: Data?) {
         OperationQueue.main.addOperation {
             switch type {
             case .beginGame:

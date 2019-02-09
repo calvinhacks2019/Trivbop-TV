@@ -24,6 +24,9 @@
 		9363D7C3220EC04B00129387 /* BebasNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9363D7BD220EC04100129387 /* BebasNeue-Light.ttf */; };
 		9363D7C4220EC04E00129387 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9363D7C0220EC04200129387 /* BebasNeue-Regular.ttf */; };
 		9363D7C5220EC05000129387 /* BebasNeue-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9363D7BF220EC04100129387 /* BebasNeue-Thin.ttf */; };
+		93F2635F220EC45F0032C5AA /* AnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F2635E220EC45F0032C5AA /* AnswerCell.swift */; };
+		93F26361220ED3490032C5AA /* String+HTMLDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F26360220ED3490032C5AA /* String+HTMLDecode.swift */; };
+		93F26363220ED6640032C5AA /* UIColor+Adjust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F26362220ED6640032C5AA /* UIColor+Adjust.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		9363D7BE220EC04100129387 /* BebasNeue-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Bold.ttf"; sourceTree = "<group>"; };
 		9363D7BF220EC04100129387 /* BebasNeue-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Thin.ttf"; sourceTree = "<group>"; };
 		9363D7C0220EC04200129387 /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
+		93F2635E220EC45F0032C5AA /* AnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCell.swift; sourceTree = "<group>"; };
+		93F26360220ED3490032C5AA /* String+HTMLDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTMLDecode.swift"; sourceTree = "<group>"; };
+		93F26362220ED6640032C5AA /* UIColor+Adjust.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Adjust.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				9363D7A4220EA10B00129387 /* UIViewController+AppDelegate.swift */,
+				93F26360220ED3490032C5AA /* String+HTMLDecode.swift */,
+				93F26362220ED6640032C5AA /* UIColor+Adjust.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -131,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				9363D773220E4ED800129387 /* Main.storyboard */,
+				93F2635E220EC45F0032C5AA /* AnswerCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -234,13 +243,16 @@
 			files = (
 				9363D772220E4ED800129387 /* NameViewController.swift in Sources */,
 				9363D7BA220EBA9700129387 /* TriviaModel.swift in Sources */,
+				93F26363220ED6640032C5AA /* UIColor+Adjust.swift in Sources */,
 				9363D7AD220EA81800129387 /* QuestionsViewController.swift in Sources */,
 				9363D770220E4ED800129387 /* AppDelegate.swift in Sources */,
 				9363D79F220E913600129387 /* Connectivity.swift in Sources */,
 				9363D7A1220E91F800129387 /* ConnectivityDelegate.swift in Sources */,
 				9363D7B8220EBA6700129387 /* Message.swift in Sources */,
 				9363D7A3220E9B1D00129387 /* DiscoverViewController.swift in Sources */,
+				93F26361220ED3490032C5AA /* String+HTMLDecode.swift in Sources */,
 				9363D7A5220EA10B00129387 /* UIViewController+AppDelegate.swift in Sources */,
+				93F2635F220EC45F0032C5AA /* AnswerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

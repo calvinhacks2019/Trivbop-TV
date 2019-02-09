@@ -17,6 +17,8 @@ class Connectivity: NSObject, MCSessionDelegate {
     var browser: MCNearbyServiceBrowser!
     var advertiser: MCNearbyServiceAdvertiser? = nil
 
+    var server: MCPeerID?
+
     var delegate: ConnectivityDelegate?
 
     func setupPeerWithDisplayName (displayName:String){
@@ -39,8 +41,13 @@ class Connectivity: NSObject, MCSessionDelegate {
         }
     }
 
-    func sendData (variable: String, data: AnyObject, sendTo: AnyObject){
-
+    func sendData(data: Data) {
+        guard let peer = server else { return }
+        do {
+            try self.session.send(data, toPeers: [peer], with: .reliable)
+        } catch {
+            self.delegate?.error(message: "Error: \(error)")
+        }
     }
 
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
@@ -53,7 +60,7 @@ class Connectivity: NSObject, MCSessionDelegate {
         do {
             let jsonDecoder = JSONDecoder()
             let sendable = try jsonDecoder.decode(MessageSendable.self, from: data)
-            self.delegate?.recieveMessage(type: sendable.type, data: data)
+            self.delegate?.recieveMessage(type: sendable.type, data: sendable.data)
         } catch {
             self.delegate?.error(message: "Error: \(error)")
         }
@@ -76,6 +83,7 @@ extension Connectivity: MCNearbyServiceAdvertiserDelegate {
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
         print("Invite from peer \(peerID)")
         invitationHandler(true, session)
+        server = peerID
     }
 
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didNotStartAdvertisingPeer error: Error) {
