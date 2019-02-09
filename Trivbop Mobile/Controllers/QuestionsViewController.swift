@@ -21,6 +21,7 @@ class QuestionsViewController: UIViewController {
                 questionLabel.alpha = 0
                 collectionView.alpha = 0
                 startPoint = nil
+                selectedCell = nil
             } else {
                 userAnswer = nil
                 questionLabel.alpha = 1
@@ -37,6 +38,7 @@ class QuestionsViewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     var answerCell: AnswerCell?
+    var selectedCell: AnswerCell?
 
     let colors = [#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), #colorLiteral(red: 0.937254902, green: 0.2784313725, blue: 0.4352941176, alpha: 1), #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1), #colorLiteral(red: 0.02352941176, green: 0.8392156863, blue: 0.6274509804, alpha: 1)]
 
@@ -104,7 +106,7 @@ class QuestionsViewController: UIViewController {
                     cell.backgroundColor = cell.backgroundColor?.darker(by: 50)
                     cells.append(cell)
                     cell.label.textColor = cell.label.textColor.darker(by: 50)
-                    if cell.label.text == question.correctAnswer {
+                    if cell.label.text == question.correctAnswer.htmlDecoded {
                         self.answerCell = cell
                     }
                 }
@@ -113,16 +115,20 @@ class QuestionsViewController: UIViewController {
     }
 
     func revealAnswer() {
-        guard let correctCell = self.answerCell,
-            let userAnswer = userAnswer else { return }
+        guard let correctCell = self.answerCell else {
+                return
+        }
         UIView.animate(withDuration: 3.0) {
             correctCell.backgroundColor = correctCell.backgroundColor?.lighter(by: 50)
             correctCell.label.textColor = correctCell.label.textColor.lighter(by: 50)
         }
         if correctCell.label.text == userAnswer {
-            print("Correct!")
+            correctCell.label.text = correctCell.label.text! + " ✅"
         } else {
-            print("Wrong!")
+            if selectedCell != nil {
+                selectedCell?.label.text = selectedCell!.label.text! + " 😢"
+            }
+            correctCell.label.text = correctCell.label.text! + " ✅"
         }
     }
 }
@@ -178,6 +184,7 @@ extension QuestionsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? AnswerCell,
             let userAnswer = cell.label.text else { return }
+        selectedCell = cell
         if let data = encode(answer: userAnswer) {
             self.userAnswer = userAnswer
             connection.sendData(data: data)
@@ -198,6 +205,7 @@ extension QuestionsViewController: UICollectionViewDataSource {
         cell.backgroundColor = colors[indexPath.row]
         cell.label.font = UIFont(name: "Bebas Neue", size: 35.0)
         cell.label.textColor = UIColor.white
+        cell.label.adjustsFontSizeToFitWidth = true
         return cell
     }
 }

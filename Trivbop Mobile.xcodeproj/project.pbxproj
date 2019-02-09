@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9329F348220F6A9A003A0AF8 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9329F347220F6A9A003A0AF8 /* LeaderboardViewController.swift */; };
 		9363D770220E4ED800129387 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D76F220E4ED800129387 /* AppDelegate.swift */; };
 		9363D772220E4ED800129387 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D771220E4ED800129387 /* NameViewController.swift */; };
 		9363D775220E4ED800129387 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9363D773220E4ED800129387 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9329F347220F6A9A003A0AF8 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeaderboardViewController.swift; path = "Trivbop Mobile/Controllers/LeaderboardViewController.swift"; sourceTree = SOURCE_ROOT; };
 		9363D76C220E4ED800129387 /* Trivbop Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trivbop Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9363D76F220E4ED800129387 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9363D771220E4ED800129387 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		9363D7AA220EA16000129387 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9329F347220F6A9A003A0AF8 /* LeaderboardViewController.swift */,
 				9363D7AC220EA81800129387 /* QuestionsViewController.swift */,
 				9363D771220E4ED800129387 /* NameViewController.swift */,
 				9363D7A2220E9B1D00129387 /* DiscoverViewController.swift */,
@@ -243,6 +246,7 @@
 			files = (
 				9363D772220E4ED800129387 /* NameViewController.swift in Sources */,
 				9363D7BA220EBA9700129387 /* TriviaModel.swift in Sources */,
+				9329F348220F6A9A003A0AF8 /* LeaderboardViewController.swift in Sources */,
 				93F26363220ED6640032C5AA /* UIColor+Adjust.swift in Sources */,
 				9363D7AD220EA81800129387 /* QuestionsViewController.swift in Sources */,
 				9363D770220E4ED800129387 /* AppDelegate.swift in Sources */,

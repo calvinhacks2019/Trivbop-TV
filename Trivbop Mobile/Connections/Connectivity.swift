@@ -35,16 +35,16 @@ class Connectivity: NSObject, MCSessionDelegate {
             advertiser = MCNearbyServiceAdvertiser(peer: peerID, discoveryInfo: nil, serviceType: serviceType)
             advertiser?.delegate = self
             advertiser?.startAdvertisingPeer()
-        }else{
+        } else {
             advertiser?.stopAdvertisingPeer()
             advertiser = nil
         }
     }
 
     func sendData(data: Data) {
-        guard let peer = server else { return }
+        // guard let peer = server else { return }
         do {
-            try self.session.send(data, toPeers: [peer], with: .reliable)
+            try self.session.send(data, toPeers: session.connectedPeers, with: .reliable)
         } catch {
             self.delegate?.error(message: "Error: \(error)")
         }
