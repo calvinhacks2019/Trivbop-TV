@@ -67,7 +67,7 @@ class Connectivity: NSObject, MCSessionDelegate {
         do {
             try self.session.send(data, toPeers: peers, with: .reliable)
         } catch {
-            self.delegate?.error("Error: \(error)")
+            self.delegate?.error(message: "Error: \(error)")
         }
     }
 
@@ -83,7 +83,13 @@ class Connectivity: NSObject, MCSessionDelegate {
 
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         print("Recieved data \(data)")
-        self.delegate?.recieveMessage(type: .beginGame, data: "Test")
+        do {
+            let jsonDecoder = JSONDecoder()
+            let sendable = try jsonDecoder.decode(MessageSendable.self, from: data)
+            self.delegate?.recieveMessage(type: sendable.type, data: sendable.data, from: peerID)
+        } catch {
+            self.delegate?.error(message: "Error: \(error)")
+        }
     }
 
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {

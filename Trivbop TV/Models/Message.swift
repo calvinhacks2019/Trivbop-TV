@@ -10,15 +10,10 @@ import Foundation
 
 enum MessageType: Int, Codable {
     case beginGame = 0          // Prepare to recieve - to client
-    case questionSingle = 1
-    case questionAll = 2
-    case questionDual = 3       // Question to client
-    case questionAnswer = 4     // Client to server, my answer
-    case questionResult = 5     // Right or wrong to client
-}
-
-protocol Message: Codable {
-    var type: MessageType { get set }
+    case question = 1           // Client to server, my answer
+    case answer = 2
+    case expireQuestion = 3
+    case revealResult = 4       // Right or wrong to client
 }
 
 struct MessageSendable: Codable {
@@ -30,15 +25,8 @@ struct MessageSendable: Codable {
     }
 }
 
-struct StartMessage: Message, Codable {
-    var type: MessageType = .beginGame
-}
-
-struct AllQuestionMessage: Message, Codable {
-    var type: MessageType = .questionAll
-    var question: Question
-
-    init(question: Question) {
-        self.question = question
-    }
+struct Answer: Codable {
+    var answer: String
+    var timeElapsed: Double
+    var isCorrect: Bool
 }
