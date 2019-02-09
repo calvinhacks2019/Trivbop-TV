@@ -8,18 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		9363D73A220E4E8000129387 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D739220E4E8000129387 /* AppDelegate.swift */; };
-		9363D73C220E4E8000129387 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D73B220E4E8000129387 /* ViewController.swift */; };
+		9363D73C220E4E8000129387 /* TriviaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D73B220E4E8000129387 /* TriviaViewController.swift */; };
 		9363D73F220E4E8000129387 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9363D73D220E4E8000129387 /* Main.storyboard */; };
 		9363D741220E4E8200129387 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9363D740220E4E8200129387 /* Assets.xcassets */; };
+		9363D782220E546A00129387 /* TriviaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D781220E546A00129387 /* TriviaModel.swift */; };
+		9363D788220E555F00129387 /* TrivialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D787220E555F00129387 /* TrivialPresenter.swift */; };
+		9363D78A220E55AF00129387 /* TriviaViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D789220E55AF00129387 /* TriviaViewable.swift */; };
+		9363D78C220E55DD00129387 /* String+HTMLDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D78B220E55DD00129387 /* String+HTMLDecode.swift */; };
+		9363D78F220E638900129387 /* AnswerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D78E220E638900129387 /* AnswerCollectionViewCell.swift */; };
+		9363D791220E6CB800129387 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D790220E6CB800129387 /* SplashViewController.swift */; };
+		9363D793220E723300129387 /* StartPartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D792220E723300129387 /* StartPartyViewController.swift */; };
+		9363D795220E73D800129387 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D794220E73D800129387 /* Connectivity.swift */; };
+		9363D797220E78AC00129387 /* UIViewController+AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D796220E78AC00129387 /* UIViewController+AppDelegate.swift */; };
+		9363D799220E802600129387 /* ConnectivityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D798220E802600129387 /* ConnectivityDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9363D736220E4E8000129387 /* Trivbop TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trivbop TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9363D739220E4E8000129387 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9363D73B220E4E8000129387 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9363D73B220E4E8000129387 /* TriviaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaViewController.swift; sourceTree = "<group>"; };
 		9363D73E220E4E8000129387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9363D740220E4E8200129387 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9363D742220E4E8200129387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9363D781220E546A00129387 /* TriviaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaModel.swift; sourceTree = "<group>"; };
+		9363D787220E555F00129387 /* TrivialPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrivialPresenter.swift; sourceTree = "<group>"; };
+		9363D789220E55AF00129387 /* TriviaViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaViewable.swift; sourceTree = "<group>"; };
+		9363D78B220E55DD00129387 /* String+HTMLDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTMLDecode.swift"; sourceTree = "<group>"; };
+		9363D78E220E638900129387 /* AnswerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCollectionViewCell.swift; sourceTree = "<group>"; };
+		9363D790220E6CB800129387 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashViewController.swift; path = "Trivbop TV/Controllers/SplashViewController.swift"; sourceTree = SOURCE_ROOT; };
+		9363D792220E723300129387 /* StartPartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPartyViewController.swift; sourceTree = "<group>"; };
+		9363D794220E73D800129387 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		9363D796220E78AC00129387 /* UIViewController+AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AppDelegate.swift"; sourceTree = "<group>"; };
+		9363D798220E802600129387 /* ConnectivityDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +72,63 @@
 		9363D738220E4E8000129387 /* Trivbop TV */ = {
 			isa = PBXGroup;
 			children = (
-				9363D739220E4E8000129387 /* AppDelegate.swift */,
-				9363D73B220E4E8000129387 /* ViewController.swift */,
-				9363D73D220E4E8000129387 /* Main.storyboard */,
-				9363D740220E4E8200129387 /* Assets.xcassets */,
+				9363D785220E54FA00129387 /* Supporting Files */,
+				9363D783220E54D800129387 /* Models */,
+				9363D784220E54E900129387 /* Views */,
+				9363D786220E551400129387 /* Controllers */,
+				9363D78D220E55E700129387 /* Externsions */,
 				9363D742220E4E8200129387 /* Info.plist */,
+				9363D794220E73D800129387 /* Connectivity.swift */,
+				9363D798220E802600129387 /* ConnectivityDelegate.swift */,
 			);
 			path = "Trivbop TV";
+			sourceTree = "<group>";
+		};
+		9363D783220E54D800129387 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9363D781220E546A00129387 /* TriviaModel.swift */,
+				9363D787220E555F00129387 /* TrivialPresenter.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9363D784220E54E900129387 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9363D73D220E4E8000129387 /* Main.storyboard */,
+				9363D78E220E638900129387 /* AnswerCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9363D785220E54FA00129387 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9363D740220E4E8200129387 /* Assets.xcassets */,
+				9363D739220E4E8000129387 /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9363D786220E551400129387 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9363D73B220E4E8000129387 /* TriviaViewController.swift */,
+				9363D790220E6CB800129387 /* SplashViewController.swift */,
+				9363D789220E55AF00129387 /* TriviaViewable.swift */,
+				9363D792220E723300129387 /* StartPartyViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9363D78D220E55E700129387 /* Externsions */ = {
+			isa = PBXGroup;
+			children = (
+				9363D78B220E55DD00129387 /* String+HTMLDecode.swift */,
+				9363D796220E78AC00129387 /* UIViewController+AppDelegate.swift */,
+			);
+			path = Externsions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,8 +201,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9363D73C220E4E8000129387 /* ViewController.swift in Sources */,
+				9363D78A220E55AF00129387 /* TriviaViewable.swift in Sources */,
+				9363D788220E555F00129387 /* TrivialPresenter.swift in Sources */,
+				9363D795220E73D800129387 /* Connectivity.swift in Sources */,
+				9363D799220E802600129387 /* ConnectivityDelegate.swift in Sources */,
+				9363D793220E723300129387 /* StartPartyViewController.swift in Sources */,
+				9363D78F220E638900129387 /* AnswerCollectionViewCell.swift in Sources */,
+				9363D797220E78AC00129387 /* UIViewController+AppDelegate.swift in Sources */,
+				9363D73C220E4E8000129387 /* TriviaViewController.swift in Sources */,
+				9363D782220E546A00129387 /* TriviaModel.swift in Sources */,
 				9363D73A220E4E8000129387 /* AppDelegate.swift in Sources */,
+				9363D78C220E55DD00129387 /* String+HTMLDecode.swift in Sources */,
+				9363D791220E6CB800129387 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

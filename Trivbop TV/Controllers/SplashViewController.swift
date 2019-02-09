@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SplashViewController.swift
 //  Trivbop TV
 //
 //  Created by Austin Evans on 2/8/19.
@@ -8,13 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class SplashViewController: UIViewController {
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
-
 }
-
