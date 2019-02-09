@@ -19,7 +19,7 @@ class TriviaViewController: UIViewController {
 
     var currentQuestion: Question?
 
-    var numberOfTriviaPerRound = 3
+    var numberOfTriviaPerRound = 15
     var currentTrivia = 0 {
         didSet {
             headerLabel.text = "QUESTION \(currentTrivia)/\(numberOfTriviaPerRound)"

@@ -351,23 +351,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="1580" height="136"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hda-pF-GbN">
-                                                    <rect key="frame" x="234" y="8" width="1100" height="100"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hda-pF-GbN">
+                                                    <rect key="frame" x="514" y="8" width="900" height="120"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="1100" id="Ep5-kw-Bvk"/>
+                                                        <constraint firstAttribute="width" constant="900" id="Ep5-kw-Bvk"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03M-KN-HZi">
-                                                    <rect key="frame" x="1350" y="68" width="93" height="60"/>
+                                                    <rect key="frame" x="1430" y="68" width="93" height="60"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIv-pT-ePR">
-                                                    <rect key="frame" x="98" y="68" width="120" height="60"/>
+                                                    <rect key="frame" x="98" y="68" width="400" height="60"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="120" id="3SI-zn-KZm"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="400" id="3SI-zn-KZm"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>

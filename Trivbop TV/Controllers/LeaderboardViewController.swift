@@ -28,12 +28,15 @@ class LeaderboardViewController: UIViewController {
 
         collectionView.delegate = self
         collectionView.dataSource = self
+
+        send()
     }
 
     func sortPlayers() {
         players.sort { (player1, player2) -> Bool in
             return player1.points > player2.points
         }
+        collectionView.reloadData()
     }
 
     func encode() -> Data? {
@@ -52,11 +55,17 @@ class LeaderboardViewController: UIViewController {
             if let jsonString = String(data: jsonData, encoding: .utf8) {
                 print(jsonString)
             }
+            collectionView.reloadData()
             return jsonData
         } catch {
             print("Leaderboard FAIL!")
         }
         return nil
+    }
+
+    func send() {
+        guard let data = encode() else { return }
+        connection.sendData(data: data, to: nil)
     }
 }
 

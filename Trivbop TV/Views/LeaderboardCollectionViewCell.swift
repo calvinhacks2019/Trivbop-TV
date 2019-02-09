@@ -14,7 +14,7 @@ class LeaderboardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var blackView: UIView!
     @IBOutlet weak var constraint: NSLayoutConstraint!
 
-    static let maxHeight: CGFloat = 1100
+    static let maxHeight: CGFloat = 700
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,5 +39,6 @@ class LeaderboardCollectionViewCell: UICollectionViewCell {
         let width: CGFloat = CGFloat(points / mostPoints) * LeaderboardCollectionViewCell.maxHeight
         constraint.constant = width
         self.invalidateIntrinsicContentSize()
+        blackView.invalidateIntrinsicContentSize()
     }
 }
