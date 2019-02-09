@@ -34,6 +34,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>BebasNeue-Bold.tff</string>
+		<string>BebasNeue-Book.tff</string>
+		<string>BebasNeue-Light.tff</string>
+		<string>BebasNeue-Regular.tff</string>
+		<string>BebasNeue-Thin.tff</string>
+	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

@@ -8,20 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		9363D770220E4ED800129387 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D76F220E4ED800129387 /* AppDelegate.swift */; };
-		9363D772220E4ED800129387 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D771220E4ED800129387 /* ViewController.swift */; };
+		9363D772220E4ED800129387 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D771220E4ED800129387 /* NameViewController.swift */; };
 		9363D775220E4ED800129387 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9363D773220E4ED800129387 /* Main.storyboard */; };
 		9363D777220E4ED900129387 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9363D776220E4ED900129387 /* Assets.xcassets */; };
 		9363D77A220E4ED900129387 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9363D778220E4ED900129387 /* LaunchScreen.storyboard */; };
+		9363D79F220E913600129387 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D79E220E913600129387 /* Connectivity.swift */; };
+		9363D7A1220E91F800129387 /* ConnectivityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D7A0220E91F800129387 /* ConnectivityDelegate.swift */; };
+		9363D7A3220E9B1D00129387 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D7A2220E9B1D00129387 /* DiscoverViewController.swift */; };
+		9363D7A5220EA10B00129387 /* UIViewController+AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D7A4220EA10B00129387 /* UIViewController+AppDelegate.swift */; };
+		9363D7AD220EA81800129387 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D7AC220EA81800129387 /* QuestionsViewController.swift */; };
+		9363D7B8220EBA6700129387 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D7B7220EBA6700129387 /* Message.swift */; };
+		9363D7BA220EBA9700129387 /* TriviaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363D7B9220EBA9700129387 /* TriviaModel.swift */; };
+		9363D7C1220EC04600129387 /* BebasNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9363D7BE220EC04100129387 /* BebasNeue-Bold.ttf */; };
+		9363D7C2220EC04900129387 /* BebasNeue-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9363D7BC220EC04100129387 /* BebasNeue-Book.ttf */; };
+		9363D7C3220EC04B00129387 /* BebasNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9363D7BD220EC04100129387 /* BebasNeue-Light.ttf */; };
+		9363D7C4220EC04E00129387 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9363D7C0220EC04200129387 /* BebasNeue-Regular.ttf */; };
+		9363D7C5220EC05000129387 /* BebasNeue-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9363D7BF220EC04100129387 /* BebasNeue-Thin.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9363D76C220E4ED800129387 /* Trivbop Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trivbop Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9363D76F220E4ED800129387 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9363D771220E4ED800129387 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9363D771220E4ED800129387 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		9363D774220E4ED800129387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9363D776220E4ED900129387 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9363D779220E4ED900129387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9363D77B220E4ED900129387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9363D79E220E913600129387 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		9363D7A0220E91F800129387 /* ConnectivityDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityDelegate.swift; sourceTree = "<group>"; };
+		9363D7A2220E9B1D00129387 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		9363D7A4220EA10B00129387 /* UIViewController+AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AppDelegate.swift"; sourceTree = "<group>"; };
+		9363D7AC220EA81800129387 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionsViewController.swift; path = "Trivbop Mobile/Controllers/QuestionsViewController.swift"; sourceTree = SOURCE_ROOT; };
+		9363D7B7220EBA6700129387 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		9363D7B9220EBA9700129387 /* TriviaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaModel.swift; sourceTree = "<group>"; };
+		9363D7BC220EC04100129387 /* BebasNeue-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Book.ttf"; sourceTree = "<group>"; };
+		9363D7BD220EC04100129387 /* BebasNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Light.ttf"; sourceTree = "<group>"; };
+		9363D7BE220EC04100129387 /* BebasNeue-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Bold.ttf"; sourceTree = "<group>"; };
+		9363D7BF220EC04100129387 /* BebasNeue-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Thin.ttf"; sourceTree = "<group>"; };
+		9363D7C0220EC04200129387 /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +78,82 @@
 		9363D76E220E4ED800129387 /* Trivbop Mobile */ = {
 			isa = PBXGroup;
 			children = (
-				9363D76F220E4ED800129387 /* AppDelegate.swift */,
-				9363D771220E4ED800129387 /* ViewController.swift */,
-				9363D773220E4ED800129387 /* Main.storyboard */,
-				9363D776220E4ED900129387 /* Assets.xcassets */,
-				9363D778220E4ED900129387 /* LaunchScreen.storyboard */,
+				9363D7B6220EB9D800129387 /* Models */,
+				9363D7AB220EA17100129387 /* Views */,
+				9363D7AA220EA16000129387 /* Controllers */,
+				9363D7A6220EA11700129387 /* Extensions */,
+				9363D7A8220EA13600129387 /* Connections */,
 				9363D77B220E4ED900129387 /* Info.plist */,
+				9363D7A7220EA12200129387 /* Supporting Files */,
 			);
 			path = "Trivbop Mobile";
+			sourceTree = "<group>";
+		};
+		9363D7A6220EA11700129387 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9363D7A4220EA10B00129387 /* UIViewController+AppDelegate.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9363D7A7220EA12200129387 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9363D7BB220EC02700129387 /* Fonts */,
+				9363D76F220E4ED800129387 /* AppDelegate.swift */,
+				9363D776220E4ED900129387 /* Assets.xcassets */,
+				9363D778220E4ED900129387 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9363D7A8220EA13600129387 /* Connections */ = {
+			isa = PBXGroup;
+			children = (
+				9363D79E220E913600129387 /* Connectivity.swift */,
+				9363D7A0220E91F800129387 /* ConnectivityDelegate.swift */,
+			);
+			path = Connections;
+			sourceTree = "<group>";
+		};
+		9363D7AA220EA16000129387 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9363D7AC220EA81800129387 /* QuestionsViewController.swift */,
+				9363D771220E4ED800129387 /* NameViewController.swift */,
+				9363D7A2220E9B1D00129387 /* DiscoverViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9363D7AB220EA17100129387 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9363D773220E4ED800129387 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9363D7B6220EB9D800129387 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9363D7B7220EBA6700129387 /* Message.swift */,
+				9363D7B9220EBA9700129387 /* TriviaModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9363D7BB220EC02700129387 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9363D7BE220EC04100129387 /* BebasNeue-Bold.ttf */,
+				9363D7BC220EC04100129387 /* BebasNeue-Book.ttf */,
+				9363D7BD220EC04100129387 /* BebasNeue-Light.ttf */,
+				9363D7C0220EC04200129387 /* BebasNeue-Regular.ttf */,
+				9363D7BF220EC04100129387 /* BebasNeue-Thin.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,8 +214,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9363D7C5220EC05000129387 /* BebasNeue-Thin.ttf in Resources */,
+				9363D7C3220EC04B00129387 /* BebasNeue-Light.ttf in Resources */,
 				9363D77A220E4ED900129387 /* LaunchScreen.storyboard in Resources */,
+				9363D7C4220EC04E00129387 /* BebasNeue-Regular.ttf in Resources */,
 				9363D777220E4ED900129387 /* Assets.xcassets in Resources */,
+				9363D7C2220EC04900129387 /* BebasNeue-Book.ttf in Resources */,
+				9363D7C1220EC04600129387 /* BebasNeue-Bold.ttf in Resources */,
 				9363D775220E4ED800129387 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +232,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9363D772220E4ED800129387 /* ViewController.swift in Sources */,
+				9363D772220E4ED800129387 /* NameViewController.swift in Sources */,
+				9363D7BA220EBA9700129387 /* TriviaModel.swift in Sources */,
+				9363D7AD220EA81800129387 /* QuestionsViewController.swift in Sources */,
 				9363D770220E4ED800129387 /* AppDelegate.swift in Sources */,
+				9363D79F220E913600129387 /* Connectivity.swift in Sources */,
+				9363D7A1220E91F800129387 /* ConnectivityDelegate.swift in Sources */,
+				9363D7B8220EBA6700129387 /* Message.swift in Sources */,
+				9363D7A3220E9B1D00129387 /* DiscoverViewController.swift in Sources */,
+				9363D7A5220EA10B00129387 /* UIViewController+AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
