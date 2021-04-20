@@ -19,7 +19,7 @@ class TriviaViewController: UIViewController {
 
     var currentQuestion: Question?
 
-    var numberOfTriviaPerRound = 15
+    var numberOfTriviaPerRound = 10
     var currentTrivia = 0 {
         didSet {
             headerLabel.text = "QUESTION \(currentTrivia)/\(numberOfTriviaPerRound)"
@@ -104,6 +104,9 @@ class TriviaViewController: UIViewController {
                     if cell.label.text == question.correctAnswer.htmlDecoded {
                         answerCell = cell
                     }
+                }
+                if let one = self.collectionView.cellForItem(at: NSIndexPath(row: 0, section: 0) as IndexPath) as? AnswerCollectionViewCell {
+                    one.alpha = 0.25
                 }
             }
             guard let cell = answerCell else { return }

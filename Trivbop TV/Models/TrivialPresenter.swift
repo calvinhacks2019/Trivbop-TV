@@ -54,7 +54,9 @@ class TriviaPresenter {
     private func getFullURL(amount: Int) -> URL? {
         guard var urlComponents = URLComponents(string: base) else { return nil }
         let queryItems = [URLQueryItem(name: "amount", value: String(amount)),
-                          URLQueryItem(name: "token", value: token)]
+                          URLQueryItem(name: "token", value: token),
+                          URLQueryItem(name: "difficulty", value: "easy"),
+                          URLQueryItem(name: "category", value: "9")]
         urlComponents.queryItems = queryItems
         return urlComponents.url
     }

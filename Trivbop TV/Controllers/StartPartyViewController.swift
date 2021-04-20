@@ -29,6 +29,8 @@ class StartPartyViewController: UIViewController {
         connection.browseSelf(browse: true)
         connection.delegate = self
 
+        connection.players.removeAll()
+
         tableView.dataSource = self
         tableView.delegate = self
 

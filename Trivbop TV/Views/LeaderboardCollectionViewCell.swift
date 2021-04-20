@@ -36,9 +36,10 @@ class LeaderboardCollectionViewCell: UICollectionViewCell {
             constraint.constant = LeaderboardCollectionViewCell.maxHeight
             return
         }
-        let width: CGFloat = CGFloat(points / mostPoints) * LeaderboardCollectionViewCell.maxHeight
+        let width: CGFloat = CGFloat(Double(points) / Double(mostPoints)) * LeaderboardCollectionViewCell.maxHeight
         constraint.constant = width
         self.invalidateIntrinsicContentSize()
         blackView.invalidateIntrinsicContentSize()
     }
 }
+
